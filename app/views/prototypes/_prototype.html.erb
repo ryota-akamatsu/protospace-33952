@@ -1,12 +1,12 @@
 <div class="card">
   <%= link_to image_tag(prototype.image, class: :card_img ), prototype_path(prototype.id)%>
-  <% if user_signed_in? && current_user.id == prototype.user_id %>
+ 
   <div class="card__body">
     <%= link_to prototype.title, prototype_path(prototype.id), class: :card_title%>
     <p class="card__summary">
-      <%= prototype.concept %>
+      <%= prototype.catch_copy %>
     </p>
-    <%= link_to  prototype.user.name, prototype_path(prototype.id), class: :card_user %>
- <% end %>
+    <%= link_to  "#{prototype.user.name}" , prototype_path(prototype.id), class: :card_user %>
+ 
   </div>
 </div>
